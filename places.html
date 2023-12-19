@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .place {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .place:hover {
+            transform: scale(1.05);
+        }
+
+        .place img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .details p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Places Information</h1>
+    </header>
+
+    <div class="container">
+        <div class="place" onclick="showDetails('place1')">
+            <img src="C:\Road trip around the world front-end\.vscode\images\beautiful resort.jpg" alt="resort pictures" width="500" height="600">
+            <img src="C:\Road trip around the world front-end\.vscode\images\beautifulfort.jpg" alt="road trip around the world" width="500" height="600">
+            <img src="C:\Road trip around the world front-end\.vscode\images\rockview.jpg" alt="Road ways" width="500" height="600">
+            <img src="C:\Road trip around the world front-end\.vscode\images\beautiful lake.jpg" alt="resort pictures" width="500" height="600">
+            
+            <h2>Place 1</h2>
+            <div class="details" id="place1">
+                <p>Description: Beautiful place with stunning views.</p>
+                <p>Location: Latitude 40.7128, Longitude -74.0060</p>
+            </div>
+        </div>
+
+        <div class="place" onclick="showDetails('place2')">
+            <img src="place2.jpg" alt="Place 2">
+            <h2>Place 2</h2>
+            <div class="details" id="place2">
+                <p>Description: Explore the rich history and culture.</p>
+                <p>Location: Latitude 34.0522, Longitude -118.2437</p>
+            </div>
+        </div>
+
+        <!-- Add more places as needed -->
+
+    </div>
+
+    <script>
+        function showDetails(placeId) {
+            var details = document.getElementById(placeId);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
